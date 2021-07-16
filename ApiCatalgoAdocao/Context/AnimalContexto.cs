@@ -55,11 +55,11 @@ namespace ApiCatalgoAdocao.Context
                           {
                               Id = Guid.Parse("e462f064-565c-460c-a19f-588acbc0553e"),
                               Idade = 2,
-                              Nome = "Meg",
+                              Nome = "Juninho",
                               Tutora = "Nilze",
                               Peso = 5,
-                              Porte = 1,
-                              Status = 1
+                              Porte = 2,
+                              Status = 3
                           },
                           new Animal()
                           {
