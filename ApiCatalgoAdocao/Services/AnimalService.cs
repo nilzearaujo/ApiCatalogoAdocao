@@ -69,7 +69,10 @@ namespace ApiCatalgoAdocao.Services
                 throw new InvalidOperationException("Animal não está cadastrado!");
             }
 
+            Guid idAnimal = paraAtualizar.Id;
+
             paraAtualizar = _mapper.MapDomain(request);
+            paraAtualizar.Id = idAnimal;
             await _repository.Update(paraAtualizar);
         }
 

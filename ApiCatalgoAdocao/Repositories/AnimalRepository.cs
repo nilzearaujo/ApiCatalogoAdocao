@@ -47,8 +47,12 @@ namespace ApiCatalgoAdocao.Repositories
         public Task Update(Animal animal)
         {
             var paraAtualizar = _contexto.Animais.FirstOrDefault(q => q.Id == animal.Id);
-            _contexto.Animais.Remove(animal);
-            _contexto.Animais.Add(animal);
+            paraAtualizar.Idade = animal.Idade;
+            paraAtualizar.Nome = animal.Nome;
+            paraAtualizar.Peso = animal.Peso;
+            paraAtualizar.Porte = animal.Porte;
+            paraAtualizar.Status = animal.Status;
+            paraAtualizar.Tutora = animal.Tutora;
             return Task.FromResult(animal);
         }
     }

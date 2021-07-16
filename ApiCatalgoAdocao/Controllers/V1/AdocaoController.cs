@@ -22,8 +22,8 @@ namespace ApiCatalgoAdocao.Controllers.V1
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<AnimalViewModel>>> GetAll([FromQuery, Range(1, 50)] int pagina = 1,
-                                                                    [FromQuery, Range(1, int.MaxValue)] int quantidade = 5)
+        public async Task<ActionResult<IEnumerable<AnimalViewModel>>> GetAll([FromQuery, Range(0, 50)] int pagina = 1,
+                                                                    [FromQuery, Range(0, int.MaxValue)] int quantidade = 5)
         {
             var result = await _animalService.GetAll(pagina, quantidade);
 
